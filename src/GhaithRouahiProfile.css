@@ -1,0 +1,199 @@
+/* General Styles */
+body {
+    font-family: 'Exo 2', sans-serif;
+    /* Exo 2 for all text */
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+    /* Pure black background */
+    color: #e0e0e0;
+    /* Light text */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.profile-container {
+    max-width: 1200px;
+    width: 90%;
+    padding: 20px;
+    background-color: #1a1a1a;
+    /* Slightly lighter black for container */
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+/* Header Section */
+.header {
+    margin-bottom: 40px;
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #800000;
+    /* Deep red for headers */
+    font-weight: 700;
+    /* Bold */
+}
+
+.header h2 {
+    font-size: 1.5rem;
+    color: #4b0f0f;
+    /* Darker red for subheaders */
+    margin-bottom: 20px;
+    font-weight: 600;
+    /* Semi-bold */
+}
+
+.header p {
+    font-size: 1.1rem;
+    color: #7c7c7c;
+    /* Grey for text */
+    margin: 0 auto 20px;
+    max-width: auto;
+    line-height: 1.6;
+    font-weight: 400;
+    /* Regular */
+}
+
+.profile-picture {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    border: 4px solid #800000;
+    /* Deep red border */
+}
+
+/* Section Styles */
+.section {
+    margin-bottom: 40px;
+}
+
+.section h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #800000;
+    /* Deep red for section headers */
+    font-weight: 700;
+    /* Bold */
+}
+
+/* Projects List */
+.projects-list {
+    list-style-type: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+.projects-list li {
+    font-size: 1.1rem;
+    padding: 15px;
+    background-color: #2a2a2a;
+    /* Dark grey for cards */
+    border-radius: 10px;
+    color: #e0e0e0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    font-weight: 400;
+    /* Regular */
+}
+
+/* Skills Grid */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+}
+
+.skill-card {
+    font-size: 1rem;
+    padding: 15px;
+    background-color: #2a2a2a;
+    /* Dark grey for cards */
+    border-radius: 10px;
+    color: #e0e0e0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    font-weight: 500;
+    /* Medium */
+}
+
+.card {
+    font-size: 1rem;
+    padding: 15px;
+    background-color: #1a1a1a;
+    /* Darker background for cards */
+    color: #e0e0e0;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    font-weight: 400;
+    /* Regular */
+}
+
+/* Certifications Grid */
+.certifications-grid {
+    list-style-type: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+.certifications-grid li {
+    font-size: 1.1rem;
+    padding: 15px;
+    background-color: #2a2a2a;
+    /* Dark grey for cards */
+    border-radius: 10px;
+    color: #e0e0e0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    font-weight: 400;
+    /* Regular */
+}
+
+/* Contact Section */
+.contact-info {
+    font-size: 1.1rem;
+    color: #7c7c7c;
+    /* Grey for text */
+    font-weight: 400;
+    /* Regular */
+}
+
+.contact-info a {
+    color: #800000;
+    /* Deep red for links */
+    text-decoration: none;
+    font-weight: 500;
+    /* Medium */
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 2rem;
+    }
+
+    .header h2 {
+        font-size: 1.2rem;
+    }
+
+    .section h3 {
+        font-size: 1.5rem;
+    }
+
+    .projects-list,
+    .skills-grid,
+    .certifications-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
