@@ -16,8 +16,17 @@ COPY . .
 # Build the React app
 RUN npm run build
 
-# Run app
-RUN npm start
+# Stage 2: Serve the app using nginx
+FROM nginx:alpine
+
+# Copy the built app from the previous stage
+COPY --from=build /app/dist /usr/share/nginx/html
+
+# Copy the nginx configuration file
+COPY nginx.conf /etc/nginx/conf.d/default.conf
 
 # Expose port 80
-EXPOSE 5173
+EXPOSE 80
+
+# Start nginx
+CMD ["nginx", "-g", "daemon off;"]
